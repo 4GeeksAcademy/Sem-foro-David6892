@@ -14,29 +14,30 @@ const Semaforo = () => {
     cursor: "pointer",
   });
 
-  return (
+ return (
+    
     <div
       style={{
-        background: "black",
-        width: "120px",
-        padding: "10px",
-        borderRadius: "10px",
+        height: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        background: "white",
       }}
     >
+      
       <div
-        style={lightStyle("red")}
-        onClick={() => setColor("red")}
-      />
-
-      <div
-        style={lightStyle("yellow")}
-        onClick={() => setColor("yellow")}
-      />
-
-      <div
-        style={lightStyle("green")}
-        onClick={() => setColor("green")}
-      />
+        style={{
+          background: "black",
+          width: "120px",
+          padding: "10px",
+          borderRadius: "10px",
+        }}
+      >
+        <div style={lightStyle("red")} onClick={() => setColor("red")} />
+        <div style={lightStyle("yellow")} onClick={() => setColor("yellow")} />
+        <div style={lightStyle("green")} onClick={() => setColor("green")} />
+      </div>
     </div>
   );
 };
